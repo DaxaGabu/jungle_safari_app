@@ -22,13 +22,4 @@ class SoundManager {
     }
   }
 
-  static void playCorrectSound() async {
-    final player = AudioPlayer();
-    await player.play(AssetSource('sounds/correct.mp3'));
-  }
-
-  static void playWrongSound() async {
-    final player = AudioPlayer();
-    await player.play(AssetSource('sounds/wrong.mp3'));
-  }
 }

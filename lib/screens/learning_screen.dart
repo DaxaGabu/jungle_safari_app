@@ -10,7 +10,7 @@ class LearningScreen extends StatelessWidget {
     'Animals': [
       {'name': 'Lion', 'image': 'assets/Animal/line.jpg'},
       {'name': 'Tiger', 'image': 'assets/Animal/tigers.jpg'},
-      {'name': 'Elephant', 'image': 'assets/Animal/Elephant.jpg'},
+      {'name': 'Elephant', 'image': 'assets/Animal/elephant.jpg'},
       {'name': 'Crocodile', 'image': 'assets/Animal/crocodil.jpg'},
       {'name': 'Rhinoceros', 'image': 'assets/Animal/Rhinoceros.jpg'},
       {'name': 'Deer', 'image': 'assets/Animal/deer.jpg'},
@@ -33,33 +33,32 @@ class LearningScreen extends StatelessWidget {
       {"name": "Saffron", "image": "assets/flowers/saffron.jpg"},
     ],
     'Trees': [
-    {"name": "Amaltas", "image": "assets/trees/Amaltas.jpg"},
-    {"name": "Arjuna", "image": "assets/trees/Arjuna.jpg"},
-    {"name": "Bael", "image": "assets/trees/Bael.jpg"},
-    {"name": "Banyan", "image": "assets/trees/Banyan.jpg"},
-    {"name": "Neem", "image": "assets/trees/Neem.jpg"},
-    {"name": "Peepal", "image": "assets/trees/Peepal.jpg"},
-    {"name": "Sal", "image": "assets/trees/Sal.jpg"},
-    {"name": "Sandalwood", "image": "assets/trees/Sandalwood.jpg"}
+    {"name": "Amaltas", "image": "assets/Trees/Amaltas.jpg"},
+    {"name": "Arjuna", "image": "assets/Trees/Arjuna.jpg"},
+    {"name": "Bael", "image": "assets/Trees/Bael.jpg"},
+    {"name": "Banyan", "image": "assets/Trees/Banyan.jpg"},
+    {"name": "Neem", "image": "assets/Trees/Neem.jpg"},
+    {"name": "Peepal", "image": "assets/Trees/Peepal.jpg"},
+    {"name": "Sal", "image": "assets/Trees/Sal.jpg"},
+    {"name": "Sandalwood", "image": "assets/Trees/Sandalwood.jpg"}
   ],
   'Vegetables': [
-    {"name": "Ash Gourd", "image": "assets/vegetables/Ash gourd.jpg"},
-    {"name": "Bitter Gourd", "image": "assets/vegetables/Bitter Gourd.jpg"},
-    {"name": "Bottle Gourd", "image": "assets/vegetables/Bottle Gourd.jpg"},
-    {"name": "Carrot", "image": "assets/vegetables/Carrot.jpg"},
-    {"name": "Moringa", "image": "assets/vegetables/Moringa.jpg"},
-    {"name": "Pumpkin", "image": "assets/vegetables/Pumpkin.jpg"},
-    {"name": "Spinach", "image": "assets/vegetables/Spinach.webp"}
+    {"name": "Ash Gourd", "image": "assets/Vegetables/Ash_gourd.jpg"},
+    {"name": "Bitter Gourd", "image": "assets/Vegetables/Bitter_Gourd.jpg"},
+    {"name": "Bottle Gourd", "image": "assets/Vegetables/Bottle_Gourd.jpg"},
+    {"name": "Carrot", "image": "assets/Vegetables/Carrot.jpg"},
+    {"name": "Moringa", "image": "assets/Vegetables/Moringa.jpg"},
+    {"name": "Pumpkin", "image": "assets/Vegetables/Pumpkin.jpg"}
   ],
   'Birds': [
-    {"name": "Eagle", "image": "assets/birds/Eagle.jpg"},
-    {"name": "Flamingo", "image": "assets/birds/Flamingo.jpg"},
-    {"name": "Hornbill", "image": "assets/birds/Hornbill.jpg"},
-    {"name": "Kingfisher", "image": "assets/birds/Kingfisher.jpg"},
-    {"name": "Owl", "image": "assets/birds/Owl.jpg"},
-    {"name": "Parrot", "image": "assets/birds/Parrot.jpg"},
-    {"name": "Peacock", "image": "assets/birds/Peacock.jpg"},
-    {"name": "Sarus", "image": "assets/birds/Sarus.jpg"}
+    {"name": "Eagle", "image": "assets/Birds/Eagle.jpg"},
+    {"name": "Flamingo", "image": "assets/Birds/Flamingo.jpg"},
+    {"name": "Hornbill", "image": "assets/Birds/Hornbill.jpg"},
+    {"name": "Kingfisher", "image": "assets/Birds/Kingfisher.jpg"},
+    {"name": "Owl", "image": "assets/Birds/Owl.jpg"},
+    {"name": "Parrot", "image": "assets/Birds/Parrot.jpg"},
+    {"name": "Peacock", "image": "assets/Birds/peacock.jpg"},
+    {"name": "Sarus", "image": "assets/Birds/Sarus.jpg"}
     ],
     'Colors' : [
       {"name": "blue", "image": "assets/color/blue.jpg"},
@@ -68,7 +67,7 @@ class LearningScreen extends StatelessWidget {
       {"name": "orange", "image": "assets/color/orange.jpg"},
       {"name": "Red", "image": "assets/color/Red.jpg"},
       {"name": "yellow", "image": "assets/color/yellow.jpg"}
-    ]
+    ],
   };
 
   @override

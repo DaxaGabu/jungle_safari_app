@@ -8,7 +8,7 @@ class DetailScreen extends StatelessWidget {
   DetailScreen({required this.name, required this.imagePath});
 
   final Map<String, Map<String, String>> itemDetails = {
-    
+        
     'Lion': {
       'info': 'Lions (Panthera leo) are big cats found in Africa and India.\nThey live in groups called prides and are known for their strength and loud roar.',
       'sanctuary': 'Gir Forest, India – Only place with Asiatic lions.\nSerengeti, Tanzania – Huge lion population.\nMasai Mara, Kenya – Best safari experience.',
@@ -121,43 +121,43 @@ class DetailScreen extends StatelessWidget {
    //vegetable s
   "Ash Gourd": {
     "info": "Ash Gourd, also known as Winter Melon, is a hydrating vegetable rich in fiber and nutrients.",
-    "benefit": "Used in Ayurveda for cooling the body, improving digestion, and detoxifying the system.",
+    "ayurveda": "Used in Ayurveda for cooling the body, improving digestion, and detoxifying the system.",
     "sanctuary": "Commonly grown in India, China, and Southeast Asia.",
     "online": "https://en.wikipedia.org/wiki/Benincasa_hispida"
   },
   "Bitter Gourd": {
     "info": "Bitter Gourd, also known as Bitter Melon, is a vegetable known for its strong bitter taste and medicinal properties.",
-    "benefit": "Used in Ayurveda for controlling diabetes, boosting immunity, and improving digestion.",
+    "ayurveda": "Used in Ayurveda for controlling diabetes, boosting immunity, and improving digestion.",
     "sanctuary": "Cultivated in tropical and subtropical regions like India, China, and Africa.",
     "online": "https://en.wikipedia.org/wiki/Momordica_charantia"
   },
   "Bottle Gourd": {
     "info": "Bottle Gourd is a water-rich vegetable known for its light and nutritious properties.",
-    "benefit": "Helps in weight loss, improves digestion, and keeps the body cool.",
+    "ayurveda": "Helps in weight loss, improves digestion, and keeps the body cool.",
     "sanctuary": "Widely grown in India, Southeast Asia, and Africa.",
     "online": "https://en.wikipedia.org/wiki/Lagenaria_siceraria"
   },
   "Carrot": {
     "info": "Carrot is a root vegetable known for its rich vitamin A content and crunchy texture.",
-    "benefit": "Improves vision, boosts immunity, and supports skin health.",
+    "ayurveda": "Improves vision, boosts immunity, and supports skin health.",
     "sanctuary": "Grown worldwide, especially in India, China, and Europe.",
     "online": "https://en.wikipedia.org/wiki/Carrot"
   },
   "Moringa": {
     "info": "Moringa, also known as Drumstick, is a highly nutritious vegetable with medicinal properties.",
-    "benefit": "Rich in antioxidants, supports immunity, and improves bone health.",
+    "ayurveda": "Rich in antioxidants, supports immunity, and improves bone health.",
     "sanctuary": "Common in India, Africa, and Southeast Asia.",
     "online": "https://en.wikipedia.org/wiki/Moringa_oleifera"
   },
   "Pumpkin": {
-    "info": "Pumpkin is a nutrient-rich vegetable known for its sweet taste and multiple health benefits.",
-    "benefit": "Boosts immunity, improves digestion, and supports heart health.",
+    "info": "Pumpkin is a nutrient-rich vegetable known for its sweet taste and multiple health ayurvedas.",
+    "ayurveda": "Boosts immunity, improves digestion, and supports heart health.",
     "sanctuary": "Widely cultivated in India, North America, and Europe.",
     "online": "https://en.wikipedia.org/wiki/Pumpkin"
   },
   "Spinach": {
     "info": "Spinach is a leafy green vegetable packed with iron, vitamins, and antioxidants.",
-    "benefit": "Boosts energy, improves bone health, and supports immunity.",
+    "ayurveda": "Boosts energy, improves bone health, and supports immunity.",
     "sanctuary": "Grown in temperate regions worldwide, including India, China, and the USA.",
     "online": "https://en.wikipedia.org/wiki/Spinach"
   },
@@ -165,43 +165,43 @@ class DetailScreen extends StatelessWidget {
 
   "Amaltas": {
     "info": "Amaltas (Golden Shower Tree) is a beautiful tree with bright yellow flowers, often used in traditional medicine.",
-    "benefit": "Used in Ayurveda for treating fever, constipation, and skin disorders.",
+    "ayurveda": "Used in Ayurveda for treating fever, constipation, and skin disorders.",
     "sanctuary": "Found in tropical and subtropical forests across India, Sri Lanka, and Southeast Asia.",
     "online": "https://en.wikipedia.org/wiki/Cassia_fistula"
   },
   "Arjuna": {
     "info": "Arjuna (Terminalia arjuna) is a medicinal tree known for its strong bark and health benefits.",
-    "benefit": "Used in Ayurveda for heart health, blood pressure regulation, and improving circulation.",
+    "ayurveda": "Used in Ayurveda for heart health, blood pressure regulation, and improving circulation.",
     "sanctuary": "Common in Indian forests, especially in the Western Ghats and sub-Himalayan regions.",
     "online": "https://en.wikipedia.org/wiki/Terminalia_arjuna"
   },
   "Bael": {
     "info": "Bael (Aegle marmelos) is a sacred tree with fragrant fruits, widely used in traditional medicine.",
-    "benefit": "Its fruit and leaves help in digestion, diabetes control, and boosting immunity.",
+    "ayurveda": "Its fruit and leaves help in digestion, diabetes control, and boosting immunity.",
     "sanctuary": "Found in dry forests of India, Sri Lanka, and Southeast Asia.",
     "online": "https://en.wikipedia.org/wiki/Aegle_marmelos"
   },
   "Banyan": {
     "info": "The Banyan tree is a massive, sacred tree known for its aerial roots and longevity.",
-    "benefit": "Used in Ayurveda for treating diabetes, skin infections, and inflammation.",
+    "ayurveda": "Used in Ayurveda for treating diabetes, skin infections, and inflammation.",
     "sanctuary": "Found in tropical regions of India, Nepal, and Sri Lanka.",
     "online": "https://en.wikipedia.org/wiki/Ficus_benghalensis"
   },
   "Neem": {
     "info": "Neem (Azadirachta indica) is a medicinal tree known for its antibacterial and antifungal properties.",
-    "benefit": "Used for skin care, dental hygiene, and treating infections in Ayurveda.",
+    "ayurveda": "Used for skin care, dental hygiene, and treating infections in Ayurveda.",
     "sanctuary": "Common in India, Bangladesh, and Africa.",
     "online": "https://en.wikipedia.org/wiki/Azadirachta_indica"
   },
   "Peepal": {
     "info": "Peepal (Sacred Fig) is a sacred tree in Indian culture, known for its heart-shaped leaves.",
-    "benefit": "Used in Ayurveda for respiratory issues, digestive problems, and stress relief.",
+    "ayurveda": "Used in Ayurveda for respiratory issues, digestive problems, and stress relief.",
     "sanctuary": "Common in India, Nepal, and Southeast Asia.",
     "online": "https://en.wikipedia.org/wiki/Ficus_religiosa"
   },
   "Sal": {
     "info": "Sal (Shorea robusta) is a tall hardwood tree used for timber and traditional medicine.",
-    "benefit": "Its resin and leaves are used in Ayurveda for skin disorders and wound healing.",
+    "ayurveda": "Its resin and leaves are used in Ayurveda for skin disorders and wound healing.",
     "sanctuary": "Found in dense forests of India, Nepal, and Bhutan.",
     "online": "https://en.wikipedia.org/wiki/Shorea_robusta"
   },
@@ -253,45 +253,79 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final details = itemDetails[name];
+    double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(name),
-        backgroundColor: const Color.fromARGB(255, 134, 206, 138),
+        title: Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
+        backgroundColor: Colors.green[400],
+        elevation: 5,
       ),
       body: details != null
           ? SingleChildScrollView(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image.asset(imagePath, height: 200, fit: BoxFit.cover),
-                  SizedBox(height: 16),
-                  Text('About', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  Text(details['info'] ?? 'No information available.'),
-                  SizedBox(height: 16),
-                  Text('Ayurvedic Importance', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  Text(details['ayurveda'] ?? 'No ayurveda details available.'),
-                  SizedBox(height: 16), 
-                  Text('Sanctuary / Native Place', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 8),
-                  Text(details['sanctuary'] ?? 'No sanctuary info available.'),
-                  SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () async {
-                      final url = details['online'] ?? '';
-                      if (await canLaunch(url)) {
-                        await launch(url);
-                      }
-                    },
-                    child : Text('Learn More'),
-                  ),
-                ],
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Display Image with rounded corners
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(imagePath,
+                          height: screenWidth * 0.9,
+                          width: double.infinity,
+                          fit: BoxFit.cover),
+                    ),
+                    SizedBox(height: 20),
+
+                    // Information Card
+                    _buildInfoCard("About", details['info'] ?? 'No information available.'),
+                    _buildInfoCard("Sanctuary / Native Place", details['sanctuary'] ?? 'No sanctuary info available.'),
+
+                    // "Learn More" Button with Icon
+                    SizedBox(height: 20),
+                    Center(
+                      child: ElevatedButton.icon(
+                        onPressed: () async {
+                          final url = details['online'] ?? '';
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          }
+                        },
+                        icon: Icon(Icons.open_in_new, size: 20),
+                        label: Text('Learn More'),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                          backgroundColor: Colors.green[400],
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
-          : Center(child: Text('No details available.')),
+          : Center(child: Text('No details available.', style: TextStyle(fontSize: 18))),
+    );
+  }
+
+  // Custom function to create an information card
+  Widget _buildInfoCard(String title, String content) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      margin: EdgeInsets.only(bottom: 16),
+      child: Padding(
+        padding: EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(title, style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green[700])),
+            SizedBox(height: 8),
+            Text(content, style: TextStyle(fontSize: 16, color: Colors.black87)),
+          ],
+        ),
+      ),
     );
   }
 }

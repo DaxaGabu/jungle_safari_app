@@ -35,7 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   audioplayers: ^6.4.0
-  url_launcher: ^6.1.11
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_test:
@@ -78,14 +78,13 @@ flutter:
     - assets/Animal/crocodil.jpg
     - assets/Animal/elephant.jpg
     - assets/Animal/deer.jpg
-    - assets/Animal/Elephant.jpg
     - assets/Animal/line.jpg
     - assets/Animal/tigers.jpg
     - assets/plants/Aloe_vera.jpg
-    - assets/plants/ashwagandha.jpg
-    - assets/plants/neem.jpg
+    - assets/plants/Ashwagandha.jpg
+    - assets/plants/Neem.jpg
     - assets/plants/tulsi.jpg
-    - assets/plants/bamboo.jpg
+    - assets/plants/Bamboo.jpg
     - assets/plants/sandalwood.jpg
     - assets/flowers/Bluebells.jpg
     - assets/flowers/hibiscus.jpg
@@ -101,7 +100,7 @@ flutter:
     - assets/Birds/Kingfisher.jpg
     - assets/Birds/Owl.jpg
     - assets/Birds/Parrot.jpg
-    - assets/Birds/Peacock.jpg
+    - assets/Birds/peacock.jpg
     - assets/Birds/Sarus.jpg
     - assets/Trees/Amaltas.jpg
     - assets/Trees/Arjuna.jpg
@@ -111,13 +110,13 @@ flutter:
     - assets/Trees/Peepal.jpg
     - assets/Trees/Sal.jpg
     - assets/Trees/Sandalwood.jpg
-    - assets/Vegetables/Ash gourd.jpg
-    - assets/Vegetables/Bitter Gourd.jpg
-    - assets/Vegetables/Bottle Gourd.jpg
+    - assets/Vegetables/Ash_gourd.jpg # Vegetables
+    - assets/Vegetables/Bitter_Gourd.jpg
+    - assets/Vegetables/Bottle_Gourd.jpg
     - assets/Vegetables/Carrot.jpg
     - assets/Vegetables/Moringa.jpg
     - assets/Vegetables/Pumpkin.jpg
-    - assets/color/blue.jpg
+    - assets/color/blue.jpg # Color
     - assets/color/Green.jpg
     - assets/color/gray.jpg
     - assets/color/orange.jpg

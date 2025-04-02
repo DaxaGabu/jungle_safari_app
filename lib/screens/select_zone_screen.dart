@@ -94,7 +94,7 @@ final List<Map<String, String>> _zones = [
   {'title': 'Flowers', 'imagePath': 'assets/Flower.jpg'},
   {'title': 'Vegetables', 'imagePath': 'assets/Vegetable.jpg'},
   {'title': 'Trees', 'imagePath': 'assets/tree.jpg'},
-  {'title': 'Plants', 'imagePath': 'assets/Plant.png'},
+  {'title': 'Plants', 'imagePath': 'assets/plant.png'},
   {'title': 'Colors', 'imagePath': 'assets/Colors.jpg'},
   {'title': 'Birds', 'imagePath': 'assets/Bird.jpg'},
 ];

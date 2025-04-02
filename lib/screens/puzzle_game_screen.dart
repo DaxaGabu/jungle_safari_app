@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'exit_screen.dart'; // Import the Exit Screen
+import 'exit_screen.dart'; // Import Exit Screen
 
 class PuzzleGameScreen extends StatefulWidget {
   final String zone;
@@ -18,14 +18,7 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
   int currentLevel = 1;
   int maxLevel = 5;
   int score = 0;
-
-  final List<List<Color>> levelBackgrounds = [
-    [Colors.greenAccent, Colors.teal],
-    [Colors.orange, Colors.deepOrange],
-    [Colors.purple, Colors.pink],
-    [Colors.blueAccent, Colors.indigo],
-    [Colors.yellow, Colors.amber]
-  ];
+  Set<String> correctlyPlacedItems = {}; // ✅ Tracks placed images
 
   @override
   void initState() {
@@ -36,31 +29,77 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
 
   void _initializeContent() {
     learningContent = {
-      'Animals': [
-        {'name': 'Lion', 'image': 'assets/Animal/line.jpg'},
-        {'name': 'Tiger', 'image': 'assets/Animal/tigers.jpg'},
-        {'name': 'Elephant', 'image': 'assets/Animal/Elephant.jpg'},
-        {'name': 'Crocodile', 'image': 'assets/Animal/crocodil.jpg'},
-        {'name': 'Rhinoceros', 'image': 'assets/Animal/Rhinoceros.jpg'},
-        {'name': 'Deer', 'image': 'assets/Animal/deer.jpg'},
-      ],
-      'Plants': [
-        {'name': 'Aloe Vera', 'image': 'assets/plants/Aloe_vera.jpg'},
-        {'name': 'Ashwagandha', 'image': 'assets/plants/Ashwagandha.jpg'},
-        {'name': 'Neem', 'image': 'assets/plants/Neem.jpg'},
-        {'name': 'Tulsi', 'image': 'assets/plants/tulsi.jpg'},
-        {'name': 'Bamboo', 'image': 'assets/plants/Bamboo.jpg'},
-        {'name': 'Sandalwood', 'image': 'assets/plants/sandalwood.jpg'},
-      ],
-      // Add the other categories similarly...
+         'Animals': [
+      {'name': 'Lion', 'image': 'assets/Animal/line.jpg'},
+      {'name': 'Tiger', 'image': 'assets/Animal/tigers.jpg'},
+      {'name': 'Elephant', 'image': 'assets/Animal/elephant.jpg'},
+      {'name': 'Crocodile', 'image': 'assets/Animal/crocodil.jpg'},
+      {'name': 'Rhinoceros', 'image': 'assets/Animal/Rhinoceros.jpg'},
+      {'name': 'Deer', 'image': 'assets/Animal/deer.jpg'},
+    ],
+    'Plants': [
+      {'name': 'Aloe Vera', 'image': 'assets/plants/Aloe_vera.jpg'},
+      {'name': 'Ashwagandha', 'image': 'assets/plants/Ashwagandha.jpg'},
+      {'name': 'Neem', 'image': 'assets/plants/Neem.jpg'},
+      {'name': 'Tulsi', 'image': 'assets/plants/tulsi.jpg'},
+      {'name': 'Bamboo', 'image': 'assets/plants/Bamboo.jpg'},
+      {'name': 'Sandalwood', 'image': 'assets/plants/sandalwood.jpg'},
+    ],
+    'Flowers': [
+      {"name": "Hibiscus", "image": "assets/flowers/hibiscus.jpg"},
+      {"name": "Jasmine", "image": "assets/flowers/Jasmine.jpg"},
+      {"name": "Lotus", "image": "assets/flowers/Lotus.jpg"},
+      {"name": "Marigolds", "image": "assets/flowers/Marigolds.jpg"},
+      {"name": "Parijat", "image": "assets/flowers/Parijat.jpg"},
+      {"name": "Rose", "image": "assets/flowers/Rose.jpg"},
+      {"name": "Saffron", "image": "assets/flowers/saffron.jpg"},
+    ],
+    'Trees': [
+    {"name": "Amaltas", "image": "assets/Trees/Amaltas.jpg"},
+    {"name": "Arjuna", "image": "assets/Trees/Arjuna.jpg"},
+    {"name": "Bael", "image": "assets/Trees/Bael.jpg"},
+    {"name": "Banyan", "image": "assets/Trees/Banyan.jpg"},
+    {"name": "Neem", "image": "assets/Trees/Neem.jpg"},
+    {"name": "Peepal", "image": "assets/Trees/Peepal.jpg"},
+    {"name": "Sal", "image": "assets/Trees/Sal.jpg"},
+    {"name": "Sandalwood", "image": "assets/Trees/Sandalwood.jpg"}
+  ],
+  'Vegetables': [
+    {"name": "Ash Gourd", "image": "assets/Vegetables/Ash_gourd.jpg"},
+    {"name": "Bitter Gourd", "image": "assets/Vegetables/Bitter_Gourd.jpg"},
+    {"name": "Bottle Gourd", "image": "assets/Vegetables/Bottle_Gourd.jpg"},
+    {"name": "Carrot", "image": "assets/Vegetables/Carrot.jpg"},
+    {"name": "Moringa", "image": "assets/Vegetables/Moringa.jpg"},
+    {"name": "Pumpkin", "image": "assets/Vegetables/Pumpkin.jpg"}
+  ],
+  'Birds': [
+    {"name": "Eagle", "image": "assets/Birds/Eagle.jpg"},
+    {"name": "Flamingo", "image": "assets/Birds/Flamingo.jpg"},
+    {"name": "Hornbill", "image": "assets/Birds/Hornbill.jpg"},
+    {"name": "Kingfisher", "image": "assets/Birds/Kingfisher.jpg"},
+    {"name": "Owl", "image": "assets/Birds/Owl.jpg"},
+    {"name": "Parrot", "image": "assets/Birds/Parrot.jpg"},
+    {"name": "Peacock", "image": "assets/Birds/peacock.jpg"},
+    {"name": "Sarus", "image": "assets/Birds/Sarus.jpg"}
+    ],
+    'Colors' : [
+      {"name": "blue", "image": "assets/color/blue.jpg"},
+      {"name": "Green", "image": "assets/color/Green.jpg"},
+      {"name": "gray", "image": "assets/color/gray.jpg"},
+      {"name": "orange", "image": "assets/color/orange.jpg"},
+      {"name": "Red", "image": "assets/color/Red.jpg"},
+      {"name": "yellow", "image": "assets/color/yellow.jpg"}
+    ],
     };
   }
 
   void _loadLevel() {
     if (learningContent.containsKey(widget.zone)) {
-      List<String> allItems = List.from(learningContent[widget.zone]!.map((item) => item['name']!));
+      List<String> allItems =
+          learningContent[widget.zone]!.map((item) => item['name']!).toList();
       int itemCount = min(currentLevel + 2, allItems.length);
       correctOrder = allItems.sublist(0, itemCount);
+      correctlyPlacedItems.clear(); // ✅ Reset placed images
       _shufflePuzzle();
     } else {
       correctOrder = [];
@@ -69,7 +108,7 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
 
   void _shufflePuzzle() {
     setState(() {
-      shuffledOrder = List.from(correctOrder)..shuffle(Random());
+      shuffledOrder = correctOrder.toList()..shuffle(Random());
       boxColors.clear();
     });
   }
@@ -79,7 +118,9 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
       if (correctOrder[index] == item) {
         shuffledOrder[index] = item;
         boxColors[index] = Colors.green;
-        score++; // Increase score when correct item is dropped
+        correctlyPlacedItems.add(item); // ✅ Mark as correctly placed
+        score++;
+
         if (_isPuzzleSolved()) {
           _showSuccessDialog();
         }
@@ -90,7 +131,7 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
   }
 
   bool _isPuzzleSolved() {
-    return shuffledOrder.join() == correctOrder.join();
+    return correctlyPlacedItems.length == correctOrder.length;
   }
 
   void _showSuccessDialog() {
@@ -145,7 +186,6 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
           IconButton(
             icon: Icon(Icons.exit_to_app),
             onPressed: () {
-              // Navigate to ExitScreen when pressed
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ExitScreen()),
@@ -158,22 +198,29 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
         width: double.infinity,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: levelBackgrounds[(currentLevel - 1) % levelBackgrounds.length],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+            colors: [
+              Colors.greenAccent,
+              Colors.lightBlueAccent,
+              Colors.orangeAccent,
+              Colors.pinkAccent,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Drag and Drop the Images Correctly!",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)),
+            Text(
+              "Drag and Drop the Images Correctly!",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+            ),
             SizedBox(height: 10),
             Wrap(
               spacing: 10,
               runSpacing: 10,
               children: List.generate(correctOrder.length, (index) {
-                return DragTarget<String>( 
+                return DragTarget<String>(
                   onAccept: (data) => _onDragAccept(data, index),
                   builder: (context, candidateData, rejectedData) {
                     return Container(
@@ -184,15 +231,15 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
                         borderRadius: BorderRadius.circular(12),
                         color: boxColors[index] ?? Colors.grey[300],
                       ),
-                      child: shuffledOrder[index] != correctOrder[index]
-                          ? Center(
+                      child: correctlyPlacedItems.contains(correctOrder[index])
+                          ? Image.asset(images[correctOrder[index]]!, fit: BoxFit.cover)
+                          : Center(
                               child: Text(
                                 correctOrder[index],
                                 textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black),
                               ),
-                            )
-                          : Image.asset(images[shuffledOrder[index]]!, fit: BoxFit.cover),
+                            ),
                     );
                   },
                 );
@@ -202,7 +249,9 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
             Wrap(
               spacing: 10,
               runSpacing: 10,
-              children: correctOrder.map((item) {
+              children: shuffledOrder
+                  .where((item) => !correctlyPlacedItems.contains(item)) // ✅ Only show draggable items
+                  .map((item) {
                 return Draggable<String>(
                   data: item,
                   feedback: Material(
@@ -232,51 +281,14 @@ class _PuzzleGameScreenState extends State<PuzzleGameScreen> {
 
 class PerformanceScreen extends StatelessWidget {
   final int score;
-
   PerformanceScreen({required this.score});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Performance & Results'),
-        backgroundColor: Colors.green,
-      ),
+      appBar: AppBar(title: Text('Performance & Results'), backgroundColor: Colors.green),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Your Score: $score',
-                style: TextStyle(
-                  fontSize: 26,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blueAccent,
-                ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                score > 5 ? 'Great Job! 🎉' : 'Keep Practicing! 💪',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
-              ),
-              SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  textStyle: TextStyle(fontSize: 18),
-                  backgroundColor: Colors.blue,
-                ),
-                child: Text('Back to Quiz'),
-              ),
-            ],
-          ),
-        ),
+        child: Text('Your Score: $score', style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
       ),
     );
   }
